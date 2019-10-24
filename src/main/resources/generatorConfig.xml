@@ -13,7 +13,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-            connectionURL="jdbc:mysql://127.0.0.1:3306/fesf_accounting"
+            connectionURL="jdbc:mysql://192.168.228.101:3306/mybatis"
             userId="root" password="lzj"/>
 
 
@@ -38,7 +38,19 @@
         </javaClientGenerator>
 
         <!-- 指定数据库表 -->
-        <table tableName="" domainObjectName="">
+        <table tableName="departments" domainObjectName="DeptEntity">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
+        </table>
+
+        <table tableName="employees" domainObjectName="EmployeeEntity">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
+        </table>
+
+        <table tableName="tb_student" domainObjectName="StudentEntity">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" />
+        </table>
+
+        <table tableName="tb_user" domainObjectName="UserEntity">
             <generatedKey column="id" sqlStatement="JDBC" identity="true" />
         </table>
 

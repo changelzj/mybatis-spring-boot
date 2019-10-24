@@ -1,10 +1,13 @@
 package com.example.entity;
 
-public class Student {
+public class UserEntity {
     private Integer id;
+
     private String name;
-    private String stunum;
+
     private Integer age;
+
+    private String sex;
 
     public Integer getId() {
         return id;
@@ -19,15 +22,7 @@ public class Student {
     }
 
     public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getStunum() {
-        return stunum;
-    }
-
-    public void setStunum(String stunum) {
-        this.stunum = stunum;
+        this.name = name == null ? null : name.trim();
     }
 
     public Integer getAge() {
@@ -36,5 +31,13 @@ public class Student {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex == null ? null : sex.trim();
     }
 }
